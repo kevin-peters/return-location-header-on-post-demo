@@ -19,7 +19,7 @@ public class SomeEntityController {
     @Autowired
     private SomeEntityRepository someEntityRepository;
 
-    @RequestMapping(path = PATH, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(path = PATH, method = RequestMethod.POST)
     public ResponseEntity<SomeEntity> createCustomer(final @RequestBody SomeEntity someEntity, final UriComponentsBuilder uriComponentsBuilder) {
         final SomeEntity savedEntity = someEntityRepository.save(someEntity);
 
